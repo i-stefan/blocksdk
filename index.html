@@ -5,6 +5,14 @@
     <script>
       var sdk = new window.sfdc.BlockSDK();
       // do something with the sdk
+      this.sdk = new BlockSDK({
+        blockEditorWidth: 600,
+        tabs: [
+            { key: 'design', url: `${window.location.origin}/block/design/`, name: 'Design' }, // This is a custom tab
+            'htmlblock', // This is the HTML Editor Tab
+            'stylingblock' // This is the styling tab
+        ]
+    }
     </script>
   </body>
 </html>
